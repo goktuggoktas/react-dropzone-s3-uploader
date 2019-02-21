@@ -126,7 +126,7 @@ export default class DropzoneS3Uploader extends React.Component {
       files,
       ...this.state.uploaderOptions,
     }
-    new S3Upload(options) // eslint-disable-line
+    window.s3UploadOptions = new S3Upload(options) // eslint-disable-line
     this.props.onDrop && this.props.onDrop(files, rejectedFiles)
   }
 
